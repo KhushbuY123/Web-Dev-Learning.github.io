@@ -1,0 +1,54 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+</head>
+<body>
+    <h3>API</h3>
+        <p> Application programming interface.it's work like a waitor.</p>
+        <p>Api return in form of Json</p>
+        <p>Web api is just like url.</p>
+    <h3>What is json</h3>
+        <p>Javascript object notation. www.json.org</p>
+    <h3>Accessing Data for json</h3>
+        <p>JSON.parse(data) mathod :-<br>To parse a string daat into a js object</p>
+        <p>JSON.strig(json) method :- <br>To parse a js object data into JSON.</p>
+    <h3>API Testing</h3>
+        <ul>
+            <li>Hoppscoth : </li>
+            <li>Postman : </li>
+        </ul>
+    <h3>AJAX</h3>
+        <p>Asynchronus Javascript and XML</p>
+    <h3>http verbs</h3>
+        <p>get , post , put etc.</p>
+    <h3>>Status code</h3>
+        <p>Successful responses start with generally 200 here, 200-ok,404-not found, 400-bad request,500- internal serveer error.</p>
+    <h3>Add information in URL'S </h3>
+        <p>We can add extra inforamtion by adding /search?q=mango</p>
+        <p>Secondaly we can also add url there .</p>
+    <h3>HTTP headers</h3>
+        <p>we can add header name value in api like text/plain,application/json</p>
+    <h3>Our first api request</h3>
+        <p>using Fetch so Fetch(url)</p>
+    <script>
+        let res=`{"fact":"Cheetahs do not roar, as the other big cats do. Instead, they purr.","length":67}`;
+        let validres=JSON.parse(res);
+        console.log(validres.fact);
+
+        let student={
+            name:"khushbu",
+            age:"20"
+        }
+        let url="https://icanhazdadjoke.com/";
+        fetch(url).then((res)=>{
+             console.log(res);
+        })
+        .catch((err)=>{
+            console.log(err);
+        })
+    </script>
+</body>
+</html>  

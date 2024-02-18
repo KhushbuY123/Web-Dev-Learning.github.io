@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CSS</title>
+    <style>
+        .nav {
+          background-color: rgb(32, 161, 236); 
+          list-style-type: none;
+          text-align: right;
+          font-style: none;
+          margin: 0;
+          padding: 0;
+        }
+        
+        .nav li {
+          display: inline-block;
+          font-size: 20px;
+          padding: 20px;
+          
+        }
+        .nav li a{
+           text-decoration: none;
+           color: aliceblue;
+        }
+        .nav ul li img{
+           align-content:"middle"
+        }
+        h4{
+            color: blue;
+        }
+        h3{
+            text-decoration: underline;
+        }
+        h1{
+            color: red;
+        
+        }
+        h1::first-letter{
+            color: rgb(173, 31, 31);
+        }
+        p::first-line{
+            color: rgb(190, 87, 87);
+        }
+        p::selection{
+            color: rgb(47, 218, 25);
+        }
+        button{
+            border-radius: 10%;
+            background-color: rgb(20, 100, 100);
+            margin-top: 3px;
+            width: 100px;
+            height: 30px;
+            color: aliceblue;
+        }
+
+    </style>
+</head>
+    <body>
+      
+    <ul class="nav">
+        <li><a href="page1.html" target="_blank">HTML</a></li>
+        <li><a href="index.html" target="_blank">INTRO</a></li>
+        <li><a href="bootstrap.html" target="_blank">BOOTSTRAP</a></li>
+        <li><a href="task.html" target="_blank">TASK</a></li>
+    </ul>
+    <h1>CSS</h1>
+        <p><b style="text-decoration: underline;">Definiton: </b>It is used to describe the style of our document.</p>
+    <h3>Basic format</h3>
+        <p style="color: rgb(122, 30, 184);">
+            h1{<br>
+            color:red;<br>}
+        </p>
+        <p><br>h1- is selector<br>color-is property <br>red -is value.<br>; -for end of that property.</p>
+    <h3>How to include style?</h3>
+        <h4>1.Inline CSS</h4>
+            <p style="color: black;">Writting style directly inline on each element.<br>
+            synatx:- style="color:value;"</p>
+            <p style="color: rgb(241, 85, 111);">This is the example.</p>
+        <h4>2.Internal CSS</h4>
+            <p>This is applied using style tag in the same document in head section.<br><br>
+            h1{<br>color:red ; <br>}</p>
+        <h4>3.External CSS</h4>
+            <p>Writting seperate CSS file and link with html document.</p>
+    <h3>Background color</h3>
+        <p>used to set background-color</p>
+    <h3>Color System</h3>
+        <h4>1.Named Color</h4>
+            <p>red, blue,green etc</p>
+        <h4>2.RGB color:</h4>
+            <p>Red green blue like, </p>
+            <p>Red:rgb(255,0,0)</p>
+            <p>Green:rgb(0,255,0)</p>
+            <p>Blue:rgb(0,0,255)</p>
+            <p>Black:rgb(0,0,0)</p>
+        <h4>3.Hex Code</h4>
+            <p>Letters: 0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F <br><b>Combination of Color= #FFFFFF;</b> <br>Black-#000000 <br>Blue-#0000ff<br>Yellow-#ffff00</p>
+    <h3>Text Properties</h3>
+        <h4>1.Text align</h4>
+            <ul>
+                <li>left/start</li>
+                <li>right/end</li>
+                <li>center</li>
+                <li>justify</li>
+            </ul>
+        <h4>2.Font-weight</h4>
+            <ul>
+                <li>100</li>
+                <li>Normal</li>
+                <li>Bold</li>
+                <li>Bolder</li>
+                <li>Lighter</li>
+            </ul>
+        <h4>3.Text-decoration</h4>
+            <ul>
+                <li>color+underline= bottom line</li>
+                <li>color+overline= up line</li>
+                <li>color+line-through =cut line to center</li>
+            </ul>
+        <h4>4.line height</h4>
+            <p>controls the height of the line of text.</p>
+        <h4>5.Letter-Spacing</h4>
+            <p>controls the horizontal spacing between text characters</p>
+        <h4>6.Font size units</h4>
+        <table border="black">
+            <tr>
+                <th>Absolute - Which is fixed that can't be changed.</th>
+                <th>Relative - </th>
+            </tr>
+            <tr>
+                <td> px - 1 inch is equals to 96px but this is not suitble for responsive websites.</td>
+                <td> % - It is often used to define a size as relative to an element's parent object.</td>
+            </tr>
+            <tr>
+                <td>pt</td>
+                <td>em - font size of parent, In case of typographical Properties like font-szie ,and font size of element itself, in case of other properites like width. DRAWBACK - snowball effect.</td>
+            </tr>
+            <tr>
+                <td>pc</td>
+                <td>rem-font size of the root element</td>
+            </tr>
+            <tr>
+                <td>cm</td>
+                <td>ch</td>
+            </tr>
+            <tr>
+                <td>mm</td>
+                <td>vh</td>
+            </tr>
+            <tr>
+                <td>in</td>
+                <td>vw+many more</td>
+            </tr>
+        </table>
+        <h4>7.Font-family</h4>    
+            <p>specifies a prioritized list of one or more font family.</p> 
+    <h3>CSS Selectors</h3>
+        <h4>1.Universal Selector</h4>
+            <p>use *</p>
+        <h4>2.Element Selector</h4>
+            <p>Select all elemetns of the same type.</p>
+        <h4>3. Id Selector</h4>
+            <p>Select an element based on the value of the element id attribute<br>use #</p>
+        <h4>4.Class Selector</h4>
+            <p>Selects an element based on their class attribute.</p>
+        <h4>5.Descendent Selector</h4>
+            <p>Eg - Selects all paragraph inside divs.Like p inside h1 inside div</p>
+    <h3>Adjacent Sibling Combinator</h3>
+        <p>Eg- heading that comes immediately after any paragraph.</p>
+        <p style="color:blueviolet;">p+h3{<br>property:value<br>}</p>
+    <h3>Child Combinator</h3>
+        <p>Eg-Selects all the buttons which are direct children of spans.</p>
+        <p style="color: blueviolet;">span>button{<br>property:value;<br>}</p>
+    <h3>Attribute Selector</h3>
+        <p>Selects elements based on the presence or value of a given attribute.</p>
+        <p style="color: blueviolet;">input[attr="value"]{<br>property:value;<br>}</p>
+    <h3>Pseudo Class</h3>
+        <p>A keyword added to a selector that specifies a special state of the selected elements</p>
+        <ul>
+            <li>:hover-after touch</li>
+            <li>:active-after click</li>
+            <li>:checked-used to radio button.</li>
+            <li>:nth-of-type-step of element.</li></ul>
+    <h3>Pseudo Element</h3>
+    <p>A Keyword added to a selector that lets you style a specific part of the selected elements</p>
+    <ul>
+        <li>::first-letter</li>
+        <li>::first-line</li>
+        <li>::selection</li>
+    
+    </ul>
+    <h3>CSS:Cascading style sheet</h3>
+        <p>The CSS cascade algorithm's job is to select CSS declaration in order to determine the correct values.CSS select files which includes later but the selector should be same..</p>
+    <h3>Selector Specifity</h3>
+        <p>Specificity is an algorithm that calculates that Weight that is applied to a given CSS declaration.<br>Use for different selector<br>id>class,attribute,pseudo-class>element and pseudo-element</p>
+        <p>3 digit number calculation = id+class+element<br><br>Like:- here <br></p>
+        <p style="color: blueviolet;">h1{<br>color:red<br>} so number is: <br><br> 0+0+1= 1</p>
+        <p style="color: blueviolet;">.myClass:hover{<br>color:blue<br>} <br>0+2(class+pseudo-class)+0=20</p>
+        <p>So here 2 exapmle shows highest priority here it reflects first prior than first example.</p>
+    <h3>Inline Specifity</h3>
+        <p>Inline style are more specific than id.</p>
+        <p>inline >id>class>element.</p>
+    <h3>! Important</h3>
+        <p>To show the most specific thing in document .Highest priority than other CSS.</p>
+    <h3>Inheritence in CSS</h3>
+        <p>Property inherited parent to child . But button and input field does'nt inherit the property of it's parent so we have to write there inherit specifically.<br><br>like:- button{<br>background-color:inherit<br>}</p>
+    <h3>Padding property</h3>
+        <p>inside box , it spaces in content.<br<b>Padding Shorthand</b>></p>
+        <ul>
+            <li>for all side-padding:50px</li>
+            <li>top & bottom | left & right - padding 1px 2px</li>
+            <li>top|left & right | bottom - padding:1px 2px 3px</li>
+            <li>top | right | bottom |left - 1px 2px 3px 4px</li>
+        </ul>
+    <h3>Margin Property </h3>
+        <p>To set spacing on the outside of border.</p>
+    <a href="css2.html" target="_blank"><button type="button">Next</button></a>
+    </body>
+</html>

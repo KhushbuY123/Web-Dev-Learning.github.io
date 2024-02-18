@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS page 2</title>
+    <style>
+        .nav {
+        background-color: rgb(32, 161, 236); 
+        list-style-type: none;
+        text-align: right;
+        font-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .nav li {
+        display: inline-block;
+        font-size: 20px;
+        padding: 20px;
+        
+      }
+      .nav li a{
+         text-decoration: none;
+         color: aliceblue;
+      }
+      .nav ul li img{
+         align-content:"middle"
+      }
+        h1{
+            color: red;
+        }
+        h1::first-letter{
+            color: rgb(161, 22, 22);
+        }
+        h4{
+            color: blue;
+        }
+        h3{
+            text-decoration: underline;
+        }
+        p::first-line{
+           color: brown;
+        }
+        #para:hover{
+             background-color: aqua;
+             transition-duration: 1s;
+             border-radius: 50%;
+        }
+        #para2:hover{
+            background-color: rgb(160, 102, 214);
+            transition: margin-top 2s ease-in 0.2s;
+        }
+        #para3:hover{
+            transform: rotate(45deg);
+            transition-duration: 1s;
+            background-color: aqua;
+        }
+        #para4,#para5{
+            text-align: center;
+            background-color: rgb(171, 156, 156);
+        }
+        #para4:hover{
+            transform: scale(1.5);
+        }
+        #para5:hover{
+            transform:translate(100px,100px);
+        }
+        #para6:hover{
+            transform: skew(45deg);
+        }
+        #para7:hover{
+            background-color: rgb(229, 194, 194);
+            box-shadow: 2px 2px 8px rgb(39, 39, 35);
+        }
+        #img1,#img2,#img3{
+            width: 400px;
+            height: 200px;
+            margin:10px;
+            background-image:url("img/krishna.png");
+            border: 2px solid rgba(0 0 0 0.7);
+            outline: none;
+
+        }
+        #img1{
+            background-size: cover;
+            display: inline-block;
+        }
+        #img2{
+            background-size: contain;
+            display: inline-block;
+            bac
+        }
+        #img3{
+            background-size: auto;
+            display:inline-block;
+        }
+        .card{
+            width: 200px;
+            height: 300px;
+            border: 2px solid black;
+            display: inline-block;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 10px rgb(116, 100, 100);
+            background-size: cover;
+            cursor: pointer;
+        
+        }
+            
+        .desc{
+            padding: 0 2px 0 2px;
+        }
+
+        
+        img{
+            width: 100%;
+            border-radius: 5px 5px 0 0 ;
+        }
+        #Static:hover{
+            position: static;
+        }
+        #relative:hover{
+            position: relative;
+            left: 100px;
+            top: 100px;
+        }
+        #absolute:hover{
+            position: absolute;
+            left: 100px;
+            top: 100px;
+        }
+        #fixed:hover{
+            position: fixed;
+            left: 100px;
+            top: 100px;
+        }
+        #container{
+            display: flex; 
+            flex-direction: column;
+            height: 300px;
+            width: 80%;
+            border: 2px solid black; 
+            background-color: beige;
+            margin: 10px auto;
+        }
+        #container div{
+            height: 100px;
+            width: 300px;
+            color: white;
+            text-align: center;
+            font: 1.5em;
+        }
+        #flexwrap{
+            display: flex; 
+            flex-direction: row;
+            height: 300px;
+            width: 80%;
+            border: 2px solid black; 
+            background-color: beige;
+            margin: 10px auto;
+            justify-content: space-evenly;
+            flex-wrap: wrap-reverse;
+        }
+        button{
+            border-radius: 10%;
+            background-color: rgb(20, 100, 100);
+            margin-top: 3px;
+            width: 100px;
+            height: 30px;
+            color: aliceblue;
+        }
+
+    </style>
+</head>
+<body>
+    <ul class="nav">
+        <li><a href="page1.html" target="_blank">HTML</a></li>
+        <li><a href="index.html" target="_blank">INTRO</a></li>
+        <li><a href="task.html" target="_blank">TASK</a></li>
+        <li><a href="bootstrap.html" target="_blank">BOOTSTRAP</a></li>
+      </ul>
+    <h1>CSS</h1>
+    <h3>Alpha Channel</h3>
+        <p>Sets the opacity for a color.<br>Ranges from 0 to 1.<br>(rgba) like : rgba(255,0,0,0.6)<br> #4dff00ff;</p>
+    <h3>Opacity</h3>
+        <p>Sets the opacity for the element.Ranges (0 to 1).</p>
+    <h3>CSS transition</h3>
+        <p id="para">Transitions enable you to define the trasition between two states of an element.</p>
+        <h4>Shorthand</h4>
+            <p id="para2">ropertry name | duration |timing-function | delay<br>This is the transition </p>
+            <p>Like - trasition:margin-top 2s ease-in-out 0.2s</p>
+    <h3>CSS Transform</h3>
+        <h4>1.rotate</h4>
+            <p id="para3">This property lets you rotate , scale, skew or translate an element.<br>transform:rotate(45deg)</p>
+        <h4>2.Scale</h4>
+            <p id="para4">transform :scale(0.5)</p>
+        <h4>3.Translate</h4>
+            <p id="para5">This set along x-axis and y-axis both</p>
+        <h4>4.skew</h4>
+            <p id="para6">transform:skew(30deg)</p>
+    <h3>Box Shadow</h3>
+        <p id="para7">It adds effects around an element's frame.<br>box-shadow:2px 2px 10px green (x-offset, y-offset, shadow, color)</p>
+    <h3>Background Image</h3>
+        <div id="img">
+            <div id="img1">
+                <p>cover</p>
+            </div>
+            <div id="img2">
+                <p>contain</p>
+            </div>
+            <div id="img3">
+                <p>auto</p>
+            </div>
+        </div>
+    <h3>Card Hover</h3>
+    <div class="card">
+        <img src="img/krishna.png" alt="man"/>
+        <div class="desc">
+            
+            <h3>Rahul Kumar</h3>
+            <p>Data Analyst</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="img/krishna.png" alt="man"/>
+        <div class="desc">
+            <h3>Madhukar Kumar</h3>
+            <p>Data Analyst</p>
+        </div>
+    </div>
+    <h3>Position property</h3>
+        <p>The position CSS property sets how a element is positioned in a document.<br>The top, right,left,bottom properties determine the final location of positioned elements.</p>
+    <ul>
+        <li id="Static">Static : The top, right , bottom ,left and z-index properties have no effect.<br>This is the default value.</li>
+        <li id="relative">Relative : the offset is relative to itself based on the values of top , right , bottom . and left.</li>
+        <li id="absolute">absolute:The element is removed from the normal document flow , and no space is created for the element in the page layout.<br>It is the position relative to its closest positioned ancestor , if any ; otherwise , it is placed relative to the initial containing block .</li>
+        <li id="fixed">fixed:It is positioned relative to the initial containing block established by the viewport</li>
+        <li id="sticky">Sticky: used to stick the content on the screen.</li>
+    </ul>
+    <h3>Flexbox</h3>
+        <p>Flexible box layout</p>
+        <p>It is one -dimensional layout method for arranging items in rows or columns.</p>
+        <p>x-axis and y-axis</p>
+        <h4>Flexbox -direction</h4>
+            <p>It sets how flex items are placed in the flex container, along which axis and direction</p>
+            <ul>
+                <li>flexbox-direction:row;  - main axis, left to right</tab>  </li>
+                <li>flexbox-direction:row-reverse; - main axis, right to left</li>
+                <li>flexbox-direction:column,- cross axis , top to bottom</li>
+                <li>flexbox-direction:column-reverse;- cross axis,bttom to top</li>
+            </ul>
+            <div id="container">
+                <div style="background-color: red;">Red</div>
+                <div style="background-color: blue;">Blue</div>
+                <div style="background-color: green;">green</div>
+                <div style="background-color: yellow;">Yellow</div>
+                <div style="background-color: orange;">orange</div>
+            </div>
+        <h4>Justify-content</h4>
+            <p>Tells how the browser distributes space between and around content items along the main -axis.</p>
+            <ul>
+                <li>Justify-content:flex-start;</li>
+                <li>justify-content:flex-end;</li>
+                <li>justify-content:center;</li>
+                <li>justify-content:space-between;</li>
+                <li>justify-content:space-evenly</li>
+            </ul>
+        <h4>Flex wrap</h4>
+            <p>Sets whether flex items are forced onto one line or can wrap onto multiple line.</p>
+            <ul>
+                <li>flex-wrap:nowrap</li>
+                <li>flex-wrap:wrap;</li>
+                <li>flex-wrap:wrap-reverse</li>
+                <div id="flexwrap">
+                    <div style="background-color: red;">Red</div>
+                    <div style="background-color: blue;">Blue</div>
+                    <div style="background-color: green;">green</div>
+                    <div style="background-color: yellow;">Yellow</div>
+                    <div style="background-color: orange;">orange</div>
+                </div>
+            </ul>
+        <h4>Align items</h4>
+            <p>distributes our items along the cross.</p>
+            <ul>
+                <li>justify-content:flex-start;</li>
+                <li>justify-content:flex-end;</li>
+                <li>justify-content:center;</li>
+                <li>justify-content:baseline;</li>
+            </ul>
+    <h3>Flex-sizing</h3>
+        <h4>flex-basis</h4>
+            <p>It sets the initial main size of the flex item.<br>flex-basis:100px</p>
+        <h4>flex-grow</h4>
+            <p>It specifies how much of the flex conaitner's remaining spaces</p>
+        <h4>flex-shrik</h4>
+            <p>It sets the flex shrink factor of the flex item.Is workks when overflow occurs.<br>flex-shrink:1</p>
+        <h4>flex-shorthand</h4>
+            <ul>
+                <li>flex-grow|flex-shrink|flex-basis -flex 2 2 100px</li>
+                <li>flex:2, 100px; - flex-grow|flex-basis</li>
+                <li>flex:2; flex-grow(unitless)</li>
+                <li>flex:100px; - flex-basis</li>
+            </ul>
+            
+            <a href="css3.html" target="_blank"><button type="button">Next</button></a>  
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>CSS 3</title>
+    <style>
+        .nav {
+        background-color: rgb(32, 161, 236); 
+        list-style-type: none;
+        text-align: right;
+        font-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .nav li {
+        display: inline-block;
+        font-size: 20px;
+        padding: 20px;
+        
+      }
+      .nav li a{
+         text-decoration: none;
+         color: aliceblue;
+      }
+      .nav ul li img{
+         align-content:"middle"
+      }
+        h1{
+            color: red;
+        }
+        h1::first-letter{
+            color: rgb(161, 22, 22);
+        }
+        h4{
+            color: blue;
+        }
+        h3{
+            text-decoration: underline;
+        }
+        p::first-line{
+           color: brown;
+        }
+        .container{
+            width: 600px;
+            height: 300px;
+            background-color: rgb(152, 224, 224);
+            display: grid;
+        }
+        .item{
+            width: 100px;
+            height: 50px;
+            background-color: greenyellow;
+            border: 2px solid black;
+            
+        }
+        #para1{
+            background-color: pink;
+            animation-name: colorAnimations;
+            /* animation-name: fontAnimation; */
+            animation-duration: 2s;
+            animation-delay: 0;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in;
+            animation-direction: alternate;
+        }
+        @keyframes fontAnimations{
+            from{font-size:10px;}
+            to{font-size:20px;}
+        }
+        @keyframes colorAnimations{
+            from{background-color: rgb(201, 115, 115);font-size:20px}
+            to{background-color: aqua; font-size:40px;}
+        }
+        #para2{
+            animation-name: khushbu;
+            animation-duration: 2s;
+            animation-delay: 0;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in;
+            animation-direction: alternate;
+            color:white;
+        }
+        @keyframes khushbu {
+            0%{
+                background-color:red;
+            }
+            50%{
+                background-color:green;
+            }
+            70%{
+                background-color: blue;
+            }
+            100%{
+                background-color: yellow;
+            }
+        }
+        @media(max-width:400px){
+            p{
+                background-color: rgb(237, 124, 169);
+            }
+            h1{
+                color: rgb(46, 193, 193);
+                text-decoration: inset-inline-end;
+                text-transform: capitalize;
+            }
+           
+        }
+        @media(orientation:landscape){
+            h1{
+                color: aqua;
+            }
+            p{
+                background-color: rgb(189, 134, 66);
+            }
+        }
+        .box{
+            width:150px;
+            height: 150px;
+            border: 2px solid black;
+            background-color: pink;
+        }
+        .one{
+            background-color: brown;
+            z-index:1;
+            position: relative;
+        }
+        .two{
+            background-color: aqua;
+            position: relative;
+            bottom: 50px;
+            z-index:0;
+        }
+        button{
+            border-radius: 10%;
+            background-color: rgb(20, 100, 100);
+            margin-top: 3px;
+            width: 100px;
+            height: 30px;
+            color: aliceblue;
+        }
+
+    </style>
+</head>
+<body>
+    <ul class="nav">
+        <li><a href="page1.html" target="_blank">HTML</a></li>
+        <li><a href="index.html" target="_blank">INTRO</a></li>
+        <li><a href="task.html" target="_blank">TASK</a></li>
+        <li><a href="bootstrap.html" target="_blank">BOOTSTRAP</a></li>
+      </ul>
+    <h1>CSS</h1>
+    <h3>CSS Grid</h3>
+        <p>Setting a container's display to grid will make all children grid items.<br>Similar to flex but column vise default <br>use for 2-D styling.</p>
+        <div class="container">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+        </div>
+    <h3>Grid Model</h3>
+        <p>row line and column lines.</p>
+        <p>Grid lines</p>
+        <p>Grid cell</p>
+        <p>Grid Track</p>
+    <h3>Grid Template</h3>
+        <p>They define the size between lines and tracks.<br>grid-template-row <br>grid-template-column</p>
+        <h4>Repeat</h4>
+            <p>Repeat is used to divide all available space.<br>grid-template-column:repeat(count,1fr)</p>
+    <h3>Grid Gaps</h3>
+        <p>They define the gaps between the lines.<br>row-gap<br>column-gap<br>grid-gap:rowGap columnGap</p>
+    <h3>Grid Columns</h3>
+        <p>Defines an item's starting & ending position inside the column.</p>
+        <p>grid-column start and end.</p>
+    <h3>Grid Properties</h3>
+        <ul>
+            <h4>horizontal</h4>
+            <li>justify-items :container</li>
+            <li>justify-self:item</li>
+            <h4>Vertical</h4>
+            <li>align-items:container</li>
+            <li>align-self:item</li>
+        </ul>
+    <h3>Animations</h3>
+        <p id="para1">To animate css elements.provdie animations to the content.here it's like similar to transition but different.</p>
+        <p style="color: blueviolet;">synatx:<br> @keyframes myName{<br>from{font-size:20px;}<br>to{font-size:40px;}<br>}</p>
+        <h4>Animation Shorthand</h4>
+            <p>animation:widthAnimate 3s ease-in 0s infinite normal<br>animation:name duration timing-function delay count direction</p>
+        <h4>% Animation</h4>    
+            <p id="para2">It os used for various stage animations , like one for 0 per one for 50 per and one for 100 per.</p>
+    <h3>Media Queries</h3>
+        <p>Help create a responsive websites.</p>
+        <p>media fearues - widthof  (viewport)</p>
+        <p style="color: purple;">@media(width:400px){<br>background-color:purple;<br>}</p>
+        <h4>orientation(of viewport)</h4>
+            <p style="color: purple;">@media(orientation:landscape){<br>div{<br>color:red;<br>}<br>}</p>
+    <h3>Z-index</h3>
+        <p>It decides the stack level of element.<br>Overlapping element with a larger z-index over those with a smaller one.</p>
+        <ul>
+            <li>z-index:auto(0)</li>
+            <li>z-index:1/2/....</li>
+            <li>z-index:-1/-2/....</li>
+        </ul>
+        <div class="box">
+            <div class="one">1</div>
+            <div class="two">2</div>
+        </div>
+    <h3>Font awesome Icons</h3>
+        <p>We can add cdn file here na use the icons<br> and Google Icons also can be used.</p>
+        <i class="fa-solid fa-trash"></i><br><br>
+    <a href="css4.html" target="_blank">
+        <button type="button">Next</button>
+    </a>
+    
+    
+</body> 
+</html>

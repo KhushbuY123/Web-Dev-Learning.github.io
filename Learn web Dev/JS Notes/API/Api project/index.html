@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>API Demo</title>
+</head>
+<body>
+    <nav>
+      <h3>API</h3>
+    </nav>
+    <div class="cards-section">
+      <div class="card">
+        <h2>CAT FACT API</h2>
+        <img class="card-img-top" src="images.jpeg" alt="Card image cap" height="200px">
+        <div class="card-body">
+          <p class="card-text" id="cat-text">This is https://catfact.ninja/fact the cat Api which tells you some random facts about the cats.</p>
+        </div>
+        <button type="button" id="cat">GET</button>
+      </div>
+      <div class="card">
+        <h2>DAD'S JOKE API<h2>
+        <img class="card-img-top" src="rm.jpg" alt="Card image cap" height="200px">
+        <div class="card-body">
+          <p class="card-text" id="joke-text">This is https://icanhazdadjoke.com/ Joke api which give you random jokes.</p>
+        </div>
+        <button type="button" id="joke">GET</button>
+      </div>
+      <div class="card">
+        <h2>RANDOM DOG API</h2>
+        <img class="card-img-top" src="download.jpeg" alt="Card image cap" id="img" height="200px">
+        <div class="card-body">
+          <p class="card-text" id="dog-text">This is <b>https://dog.ceo/api/breeds/image/random</b>dog api which generates random images of dogs.</p>
+        </div>
+        <button type="button" id="dog">GET</button>
+      </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+      <script src="app.js"></script>
+</body>
+</html>

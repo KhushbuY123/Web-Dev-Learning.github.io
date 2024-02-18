@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let todo=[]
+let req=prompt('Please Enter your choice')
+while(true){
+    if(req=='quit'){
+        console.log("qutting app");
+        break;
+    }
+    if(req=="list"){
+        console.log("-------------");
+        for (let i=0; i<todo.length;i++){
+             console.log(i,todo[i]);
+        }
+        console.log("----------------");
+        
+    }
+    else if(req=="add"){
+        let task=prompt("Enter your task");
+        todo.push(task);
+        console.log("task added")
+    }
+    else if(req=="delete"){
+        let idx=prompt("Enter the index of the task you want to delete");
+        todo.splice(idx,1);
+        console.log("task deleted")
+    }
+    else{
+        console.log("Please Enter valid option");
+    }
+    req=prompt("Please Enter your choice")
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Async function</h1>
+    <p>async and await keywords</p>
+    <h3>await keyword</h3>
+    <p>pauses the execution of tis sorrounding async function until the promise is settled (resolve or rejected)</p>
+    <script>
+        // async function greet(){
+        //     throw "some random error"
+        //     return "hello world";
+        // }
+        // greet().then(()=>{
+        //     console.log("accepted")
+        // })
+        // .catch((err)=>{
+        //     console.log("promise was rejected",err)
+        // })
+        //await keyword......................
+        function getnum(){
+            return new promise((resolve,reject)=>{
+                setTimeout(() => {
+                    let num=math.floor(Math.random()*10)+1;
+                    return num;
+                }, 1000);
+            });
+        }
+        async function demo(){
+            getnum();
+        }
+    </script>
+</body>
+</html>
