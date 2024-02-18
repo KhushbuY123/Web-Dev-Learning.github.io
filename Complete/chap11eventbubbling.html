@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+    <style>
+        .main{
+            background-color: rgb(82, 130, 130);
+            height: 200px;
+            width: 400px;
+        }
+        ul{
+            background-color: rgb(151, 175, 175);
+        }
+        ul li{
+            background-color: rgb(202, 218, 213);
+        }
+    </style>
+</head>
+<body>
+    <h3>Event Bubbling</h3>
+    <p>Here when we click only div it print div console but when we click its child ul then it print both parent and it's own value , this phenomenon is called event bubbling .</p>
+    <div class="main">
+            <ul>
+                <li>one</li>
+                <li>two</li>
+                <li>three</li>
+            </ul>
+    </div>
+    <script>
+        let main=document.querySelector(".main");
+        let ul=document.querySelector("ul");
+        let li=document.querySelectorAll("li");
+        main.addEventListener("click",function(){
+            console.log("hii main section is added.")
+            console.log(main.value);
+        })
+        ul.addEventListener("click",function(){
+            event.stopPropagation();  //used to stop the event bubbling 
+            console.log("ul is click");
+        })
+        for(lis of li){
+            lis.addEventListener("click",function(){
+            event.stopPropagation();  //used to stop event bubbling
+            console.log("li was clicked");
+        })
+        }
+        
+    </script>
+</body>
+</html>

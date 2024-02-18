@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS CALL</title>
+</head>
+<body>
+    <h3>JS CALL STACK</h3>
+     <p>It is basicaally a data structure , calling a function within a function.</p>
+    <h3>Visualizing the call stack</h3>
+    <h3>Breakpoints</h3>
+     <p>Breaks the big code's some lines.</p>
+    <h3>JS is Single threaded language</h3>
+     <p>Js is simple in synchronus nature but when we use settimeout function here we make js asynchronus.</p>
+    <h3>CallBack Hell</h3>
+     <p>This situation occurs when we use callbacks.</p>
+    <script>
+        //call stack....................
+        function one(){
+            return 1;
+        }
+        function two(){
+            return one()+one()
+        }
+        function three(){
+            let ans= one()+two();
+            console.log(ans)
+        }
+        three();
+        //Callback hell using callback.......................
+        h1=document.querySelector("h1");
+        function changecolor(color,delay,nextcolor){
+            setTimeout(() => {
+                h1.style.color=color;
+                if (nextcolor) nextcolor();
+            }, delay);
+           
+        }
+        changecolor("red",1000,()=>{
+            changecolor("purple",2000,()=>{
+                changecolor("green",3000);
+            });
+        });
+    </script>
+</body>
+</html>

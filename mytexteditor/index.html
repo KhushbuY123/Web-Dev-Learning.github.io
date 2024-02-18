@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Events</title>
+    <style>
+        *{
+            text-align: center;
+            background-color: rgb(219, 32, 60);
+        }
+        input{
+            border: 2px solid rgb(73, 163, 172);
+            border-radius: 5%;
+            height: 40px;
+            width: 200px;
+        }
+        p{
+            color: white;
+        }
+        
+    </style>
+</head>
+<body>
+
+    
+    <h1>My text editor </h1>
+    <p></p>
+    <br<br><br><br>
+    <input type="text" id="text" placeholder="add something"> 
+  
+    
+    <script>
+        type=document.querySelector("#text");
+        p=document.querySelector("p")
+        type.addEventListener("input",function(){
+            console.log("Your para is entered in the para section");
+            console.log(type.value);
+            p.innerText=type.value;
+        })
+    </script>
+</body>
+</html>
