@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM events</title>
+    <style>
+        .red{
+            color: red;
+        }
+        .blue{
+            color: blue;
+        }
+        .box{
+            border: 2px solid black;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dom events</h1>
+    <p>Events are signals that something has occured.(user inputs/actions).</p>
+    <p>onclick-  when an element is clicked</p>
+    <p>onmouseenter- when mouse enters an element</p>
+    <button onclick="console.log(`Button is Clicked`)">Click Me</button>
+    <button >Like me!</button>
+    <button>Next Me!</button>
+    <button>Submit me!</button>
+    <script>
+        //practice...................................
+        let bodies=document.querySelector("body");
+        let para1=document.createElement('p');
+        para1.innerText="hey I am red!"
+        body.append(para1);
+        para1.classList.add("red");
+        let head=document.createElement(h);
+        head.innerText="<h3>I'm blue h3!</h3>"
+        bodies.append(head.style.color="blue");
+        let div1=document.createAttribute("div");
+        let h1=document.createElement("h");
+        h1.innerText="I'am in a div"
+        div1.append(h1);
+        let p1=document.createElement("p");
+        p1.innerText="Me too!";
+        div1.append(p1);
+        div1.classList.add("box");
+        //DOM Events................................
+        //onclick........
+        let btn=document.querySelector("button");
+        console.dir(btn);
+        btn.onclick=function(){
+            alert("button was Clicked , tried good!");
+        }
+        let bttn=document.querySelectorAll("button");
+        for(btn of bttn){
+            btn.onclick=sayHello;
+            //onmousecenter........
+            btn.onmouseenter=function(){
+                console.log("Button onmouseenter!");
+            }
+        }
+        function sayHello(){
+            alert("Hello");
+            console.log("Submitted!");
+        }
+        //Event Listener............
+        btn.addEventListener("click",sayHello);
+        btn.addEventListener("click",sayhii);
+        btn.addEventListener("click",function(){
+            console.log("hii this is khushbu");
+        })
+        function sayhii(){
+            alert("say hi");
+        }
+    </script>
+</body>
+</html>

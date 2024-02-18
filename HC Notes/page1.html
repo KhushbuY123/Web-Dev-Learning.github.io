@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav {
+          background-color: rgb(32, 161, 236); 
+          list-style-type: none;
+          text-align: right;
+          font-style: none;
+          margin: 0;
+          padding: 0;
+        }
+        
+        .nav li {
+          display: inline-block;
+          font-size: 20px;
+          padding: 20px;
+          
+        }
+        .nav li a{
+           text-decoration: none;
+           color: aliceblue;
+        }
+        .nav ul li img{
+           align-content:"middle"
+        }
+        h4{
+            color: blue;
+        }
+        h2{
+            text-decoration: underline;
+        }
+        
+        </style>
+</head>
+<body>
+    <ul class="nav">
+        <li><a href="index.html" target="_blank">INTRO</a></li>
+        <li><a href="css.html" target="_blank">CSS</a></li>
+        <li><a href="bootstrap.html" target="_blank">BOOTSTRAP</a></li>
+        <li><a href="task.html" target="_blank">TASK</a></li>
+      </ul>
+      <h1 style="color: rgb(230, 26, 26)">HTML</h1></style></h1>
+<h1>Level 1</h1>
+    <h2>Html Elements</h2>
+        <p>Standard element that browser recognizes :</p>
+        <p>Paragraph<br>
+        Heading<br>Image <br>More...
+        </p>
+    <h2>Html tag</h2>
+        <p>A container for some content or other tags ,
+        like :- content within  <u>opeining and closing</u> paragraph tag.
+        <br><b>Nesting or nested tags:-</b> tag within tag.
+        </p>
+    <h2>Boiler plate code</h2>
+        <p>This is the Standard format or skeleton of writting HTML code.It is the part of code which is necessary to write.<br>
+        let's see boiler tag:- <br><b>DOCTYPE</b>:- This is used to represent the version of html.<br><b>Html:-</b>This is the root element of html .<br><b>head:-</b>This is the part which is not visible to page.<br><b>title:-</b>Always written . It does'nt display to page but it should be relevent to page bco'z google seac=rch our page according ot our title.<br><b>Body:-</b>This part is visible in whole screen.</p>
+        <b>Shortcut key for boiler plate code :- click on exclamation .</b>   
+        <p>
+    <h2>List</h2>
+        <h4><u>Unordered List</u></h4>
+            <p>tag ul then after no of li tag . </p>
+                <ul>
+                    <h4>Basic details:-</h4>
+                    <li>Khushbu</li>
+                    <li>Btech</li>
+                    <li>CSE</li>
+                </ul>
+       
+        <h4><u>Ordered List</u></h4>
+            <p> tag ol then after no of li tag . We can use reversed word to reverse the list sequence.</p>
+                <ol type="a" >
+                    <h4>Basic details:-</h4>
+                    <li>Khushbu</li>
+                    <li>Btech</li>
+                    <li>CSE</li>
+                </ol>
+    <h2>Html Attributes</h2>
+        <p>Attribute are used to add more inforamtion to the tag.<br>
+        like :<br> 1.html lang = "en" here lang is attribute and eng is value<br>2. meta tags</p>
+    <h2>Anchor tag</h2>    
+        <p>used to add links , used a tag to add link. format :-  a href="link"<br>
+        like :- <a href="https://google.com">Google</a> </p>
+        <p>There are two types of links:- <br>
+        1.Absolute link : Which is hosted on internet.<br>
+        2.Relative link: within our system.</p> 
+    <h2>Image Element</h2>
+        <p>used to add image. Here img is a single tag. format :- img src="path" alt="details"<br>
+        <img src="1.jpg" alt="mypic" width="200px" height="200px"></p>
+    <h2>Br tag</h2>
+        <p>use to break the paragraph.</p>
+    <h2>Html Comment</h2>
+        <p>This is the part of code that should not be parsed. Format: angular !--<br>Shortcut : cntrl + /</p>
+----------------------------------------------------------------------------------------------------------------------------------------
+<h1>Level 2</h1>
+    <h2>Inline v/s Block</h2>
+    <h3>Block Elements:</h3>
+        <ul>
+            <li>Takes up the full width available (whole block)</li>
+            <li>Start from new line. for ex:- heading tag , paragraph tag</li>
+        </ul>
+    <h3>Inline Elements:</h3>
+        <ul>
+            <li>Takes up only necessary width.</li>
+            <li>Don't start from new line. for ex:- anchor tag</li>
+        </ul>
+    <h3>Image Element</h3>
+        <p> Is is also a inline element.</p>
+    <h3>Div Element</h3>
+        <p>Div is a container used to hold other html element or group element together.</p>
+        <div>
+            <a href="www.google.com">Google</a>
+            <a href="www.google.com">Google</a>
+        </div>
+        <div>
+            <a href="www.google.com">Google</a>
+            <a href="www.google.com">Google</a>
+        </div>
+    <h3>Span Element</h3>
+        <p>Span is also a generic container used to hold other html elements or group elements together.<br>The major difference between Div and Span is that Div is block element whereas span is inline element.</p>
+        <span>
+            <a href="www.google.com">Google</a>
+            <a href="www.google.com">Google</a></span>
+        <span>
+            <a href="www.google.com">Google</a>
+            <a href="www.google.com">Google</a> 
+            <p>For ex:- Quora </p>
+        </span>
+    <h3>HR tag</h3>
+        <p>used to break page. Similar to br but it is used for line.</p>
+        <p>I am khushbu yadav</p>
+        <hr/>
+        <p>I am from Tulsipur.</p>
+        <p>I am currently pursuing btech in computer science and engineering.</p>
+    <h3>Sub and Sup Tag</h3>
+        <p>(Superscript) This comes upper of word.</p>
+        a<sup>2</sup>+b<sup>2</sup>==c<sup>2</sup>
+        <p>(Subscript) This comes under the word.</p>
+        H<sub>2</sub>O
+    <h3>Semantic markup</h3>
+        <p>It is markup that release to the meaningof content.<br>Like:- h tag. p tag , img tag !! we know by seeing that it is heading.<br>
+        but Div,Span is non-semantic because we can't determined which type of content is this.<br><b>Benefits:- </b><br>
+        1. Meaningful layout<br>
+        2. SEO friendly<br>
+        3. Readable + screen readability.</p>
+    <h3>Semantic Tag</h3>
+     <h4>Header tag</h4>
+       <header>Apna College <a href="#"></a></header>
+     <h4>Main Tag</h4>
+       <main>this is my main content.</main>
+     <h4>Footer Tag</h4>
+       <footer>Made with &hearts;</footer>
+     <h4>Nav Tag</h4>
+       <p>It is used to link current page to other page.</p>
+     <h4>Article Tag</h4>
+     <h4>Section tag</h4>
+       <p>Used for related content</p>
+     <h4>Aside tag</h4>
+       <p>Provide link to related content.</p>
+    <h3>Html Entities</h3>
+        <ul>
+            <li>An Html entities is a piece of text ("string") that begins with an ampersend (&) and end with semiolon (;).</li>
+            <li>used to display reserved characters (which would otherwise be interpreted as HTML cpde) , and invisible characters(like non-breaking spaces).</li>
+            <li>can also used in place of characters that are difficult to type with a Standard keyboard.</li>
+            <li>browser interpretes them & renders correct characters.</li>
+            <li><b>Some entities:-</b></li>
+            <ol>
+                <li>space-nbsp</li>
+                <li> less than - lt</li>
+                <li>greater than- gt</li>
+                <li>quot</li>
+            </ol>
+        </ul> 
+    <h3>Emmet</h3>
+        <p>Set a related plugins.Essential toolkit for web developers.Like shortcut for boiler plate code. Seemless process of coding.<br>Nesting also like emmit here we follow parent child relation.
+        <br>like:-<br>1. p>div+img is used to form the parent child relation .<br>2.For multiplication = ul>li*5<br>3.Siblings= div+p+bq<br>4. Item numbering = ul>li.item*5<br>5. Climb-up= div+div>p>span+em^bq</p>
+    <h3>Understanding HTML 5</h3>  
+       <p>The term HTML5 is essentially a buzzword that refers to a set of modern web technologies.This includes the HTML living , along with JS API's to enhance storage , multimedia , and hardware access. </p>
+----------------------------------------------------------------------------------------------------------------------------------------
+    <h1>Level 3</h1>
+    <h3>Tables</h3>
+    <p>Tables are used to operate real life table data.</p>
+    <p>here flow becomes:- table-tr-th then tr-td</p>
+    <p>tr tag- used to display table row</p>
+    <p>td tag- used to display table data</p>
+    <p>th tag- used to display table header.</p>
+    <table border="2px solid black">
+        <tr>
+            <th>header 1</th>
+            <th>header 2</th>
+           
+        </tr>
+        <tr>
+            <td>data 1</td>
+            <td>data 2</td>
+        </tr>
+        <tr>
+            <td>Data3</td>
+            <td>Data 4</td>
+        </tr>
+    </table>
+    <table border="black">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Frooti</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Samosa</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>Chips</td>
+                <td>5</td>
+            </tr>
+        </tbody>
+        
+    </table>
+    <h3>Table Semantics</h3>
+        <p> thead - to wrap table header</p>
+        <p> tbody- to wrap table body</p>
+        <p> tfoot - to wrap table footer</p>
+    <h3>Colspan and rowspan</h3>
+        <p>used to create cells which spans over multiple rows and columns.</p>
+        <table border="black">
+            <caption>Food Menu</caption>
+            <thead>
+                <tr>
+                    <th rowspan="2">Item</th>
+                    <th colspan="2">Price</th>
+                </tr>
+                <tr>
+                    <th>INR</th>
+                    <th>USD</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Frooti</td>
+                    <td>10</td>
+                    <td>0.14</td>
+                </tr>
+                <tr>
+                    <td>Chips</td>
+                    <td>5</td>
+                    <td>0.3</td>
+                </tr>
+                <tr>
+                    <td>Samosa</td>
+                    <td>12</td>
+                    <td>0.20</td>
+                </tr>
+            </tbody>
+        </table>
+    <h3>HTML Forms</h3>
+        <p>Form are used to collect data from the user.</p>
+        <p>Syntax :- form - content- form</p>
+        <h4>Action Attribute</h4>
+            <p>Action attribute is used to defined what action needs to be performed when a form is submitted or where the form data should be sent.</p>
+            <p>like : form action="/action.php"<br>form action="/action"</p>
+    <h3>Form Element</h3>    
+    <h4>Input</h4> 
+    <ul>
+        <li>used to create multiple for controls</li>
+        <li>there are multiple types of inputs that can be created using type attribute</li>
+    </ul>
+    <h4>Placeholder</h4>
+        <p>input type="text" placeholder="Name"</p>
+    <h4>Label</h4>
+        <p>Label element represent a caption for an item in a user interface.</p>
+    <h4>Button Element</h4>
+    <p>button-submit-button</p>
+    <p>There are three type of button used in html .</p>
+    <ul>
+        <li>button type="submit"</li>
+        <li>button type="button</li>
+        <li>button type="reset"</li>
+    </ul>
+    <h4>name Attribure</h4>
+        <p>Name of the form control. Submitted with the form a part of name/value pair. </p>
+    <h4>Dropdown</h4>
+    <h4>TextArea</h4>
+    <p>label for = "feedback" </p>
+        <p>Used to make dropdown list.</p>
+    <h4>Range</h4>
+    <label for="vol">Select your volume level:</label>
+    <input type="range" id="vol" min="0" max="100" name="val">
+        <h3>Basic Form</h3>
+    <form action="/action">
+        <div>
+            <label for="username">Enter Username:</label>
+            <input type="text" placeholder="Enter Username" id="username" name="username"><br>
+        </div>
+        <div>
+            <label for="password">Enter password:</label>
+            <input type="password" placeholder="Enter password" id="password" name="password"><br>
+        </div>
+        <div>
+            <label for="number">Enter number:</label>
+            <input type="number" placeholder="Enter number" id="number" name="number"><br>
+        </div> 
+        <div>
+            <label for="time">Enter time:</label>
+            <input type="time" placeholder="Enter time" id="time" name="time"><br>
+        </div>
+        <div>
+            <label for="age">I am 18+</label>
+            <input type="checkbox" name="age" id="age" checked>
+        </div>
+        <div>
+            <label for="btech">Btech</label>
+            <input type="radio" name="fruit" id="btech" value="btech">
+            <lablel for="bA">BA</lablel>
+            <input type="radio" name="fruit" id="bA" value="bA">
+        </div>
+        <div>
+            <select name="profession" id="profession">
+                <option value="Student">Student</option>
+                <option value="dev">Developer</option>
+            </select>
+        </div>
+        <button type="submit">submit</button>
+        <button type="reset">Reset</button>
+        <button type="button">Button</button>
+        
+    </form>
+</body>
+</html>

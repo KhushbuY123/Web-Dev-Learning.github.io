@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //function'''''''''''''''''''''''''''''''''''''''''''
+         function sum(){
+            console.log("Hello");
+         } 
+         sum();  
+         sum();
+         sum();
+        //  function table(){
+        //     let n=prompt("Enter the number");
+        //     for(let i =1; i<=10;i++){
+        //         console.log(n*i);
+        //     }
+        //  }
+        //  table();
+        function dice(){
+            let flow=Math.floor(Math.random()*6)+1;
+            console.log(flow);
+        }
+        dice();
+        //function with argumetns'''''''''''''''''''''''''''''''''''''''''''
+        // function printname(name){
+        //     return name;
+        // }
+        // let name=prompt("Enter the name");
+        // console.log(printname(name));
+        //sum of 1 to n......................................
+        // function sum(n){
+        //     let add=0;
+        //     for(let i=0;i<=n;i++){
+        //         add=add+i;
+                
+        //     }
+        //     return add
+        // }
+        // n=prompt("Enter the number");
+        // console.log(sum(n));
+        //concatenation of string'''''''''''''''''''''''''''''''''''''
+        let arr=["khushub","yeadav","btech"];
+        function merge(arr){
+            let result;
+            for(let i=0;i<arr.length;i++){
+                result+=arr[i];
+            }
+            return result;
+        }
+        console.log(merge(arr));
+        //block scope...................................
+        //can't print the value outside the function
+        function add(){
+            let a=10;
+            console.log(a);
+        }
+        add();
+        //Lexical Scope...................................
+        //nested function creation
+        function outer(){
+            let x=5;let y=6;
+            function innerfuction(){
+                console.log(x);
+            }
+            innerfuction();
+        }
+        outer();
+        //practice''''''''''''''''''''''''''''''''''''''''''
+        let greet="hello";
+        function changegreet(){
+            let greet="namaste";
+            console.log(greet);
+            function innergreet(){
+                console.log(greet);
+            }
+        }
+        console.log(greet);
+        changegreet();
+        //function expression..................................
+        const al=function(a,b){
+            return (a+b);
+        }
+        al(2,3);
+        //higher order function'''''''''''''''''''''''''''''
+        function multipleGreet(func,count){
+            for(let i=0;i<=count;i++){
+               func();
+            }
+        }
+        let ngreet=function(){
+            console.log("hello");
+        }
+        multipleGreet(ngreet,1000);
+      //higher order function'''''''''''''''''''''''''''''''''''''
+      function oodoreven(){
+        if(request=="odd"){
+            return function(n){
+                console.log(!(n%2==0));
+            }
+        }
+        else if(request=="even"){
+            return function(n){
+                console.log(n%2==0);
+            }
+        }
+        else{
+            consol.log("wrong request");
+        }
+      }
+      let request="odd";
+      //method'''''''''''''''''''''''''''''
+      const calc={
+        add:function(a,b){
+            return a+b;
+        },
+        sub:function(a,b){
+            return a-b;
+        },
+        mul:function(a,b){
+            return a*b;
+        }
+      };
+      //Defualt parameters'''''''''''''''''''''''''''
+    function div(a, b=2){
+        console.log(a*b);
+    }
+    div(4);
+      </script>
+</body>
+</html>

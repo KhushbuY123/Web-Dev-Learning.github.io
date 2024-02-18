@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        :root {
+           --card-height: 300px;
+           --card-width: calc(var(--card-height) / 1.5);
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            background: #6474ba;
+        }
+        .card {
+            width: var(--card-width);
+            height: var(--card-height);
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding: 0 36px;
+            perspective: 2500px;
+            margin: 50px 50px;
+        }
+        .box{
+            display: flex;
+            height: 80vh;
+            margin-top: 100px;
+            justify-content: space-evenly;
+            background-color: aliceblue;
+            border: 1px ssolid rgb(69, 29, 109);
+        }
+
+        .cover-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .wrapper {
+            transition: all 0.5s;
+            position: absolute;
+            width: 100%;
+            z-index: -1;
+        }
+
+        .card:hover .wrapper {
+            transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+            box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+            -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+        }
+
+        .wrapper::before,
+        .wrapper::after {
+            content: "";
+            opacity: 0;
+            width: 100%;
+            height: 80px;
+            transition: all 0.5s;
+            position: absolute;
+            left: 0;
+        }
+        .wrapper::before {
+            top: 0;
+            height: 100%;
+            background-image: linear-gradient(
+                to top,
+                transparent 46%,
+                rgba(12, 13, 19, 0.5) 68%,
+                rgba(12, 13, 19) 97%
+        );
+        }
+        .wrapper::after {
+            bottom: 0;
+            opacity: 1;
+            background-image: linear-gradient(
+                to bottom,
+                transparent 46%,
+                rgba(12, 13, 19, 0.5) 68%,
+                rgba(12, 13, 19) 97%
+        );
+        }
+
+        .card:hover .wrapper::before,
+        .wrapper::after {
+            opacity: 1;
+        }
+
+        .card:hover .wrapper::after {
+             height: 120px;
+        }
+        .title {
+            width: 100%;
+            transition: transform 0.5s;
+        }
+        .card:hover .title {
+            transform: translate3d(0%, -50px, 100px);
+        }
+
+        .character {
+            width: 100%;
+            opacity: 0;
+            transition: all 0.5s;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .card:hover .character {
+            opacity: 1;
+            transform: translate3d(0%, -30%, 100px);
+        }
+        .content{
+            background-color: rgb(185, 206, 224);
+            padding: 2rem;
+            border: 1px solid rgb(69, 29, 109);
+            
+        }
+        .pink{
+            background-color: pink;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="card">
+            <div class="wrapper">
+            <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-cover.jpg" class="cover-image" />
+            </div>
+            <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-title.png" class="title" />
+            <img src="https://ggayane.github.io/css-experiments/cards/dark_rider-character.webp" class="character" />
+        </div>
+        <div class="card">
+            <div class="wrapper">
+            <img src="https://ggayane.github.io/css-experiments/cards/force_mage-cover.jpg" class="cover-image" />
+            </div>
+            <img src="https://ggayane.github.io/css-experiments/cards/force_mage-title.png" class="title" />
+            <img src="https://ggayane.github.io/css-experiments/cards/force_mage-character.webp" class="character" />
+        </div>
+    </div>
+    <div class="content">
+        <h3>Selecting Element </h3>
+        <h4>getElementById</h4>
+        <p>Returns the Element as an object or null(if not found).</p>
+        <h4>getElementByClassName</h4>
+        <p>Returns the elements as an html collection or empty collection (if not found).</p>
+        <h4>getElementByTagName</h4>
+        <p>Returns the elements as an html collection or empty collection (if not found).</p>
+        <h4>Query Selector</h4>
+        <p>Allows us to use any CSS selector.</p>
+        <h3>Setting content in objects.</h3>
+        <ul id="list">
+            <h4 id="h">innerText</h4>
+                <li>Shows the visible text contained in a node.</li>
+            <h4>textContent</h4>
+                <li>Shows all the text.</li>
+            <h4>innerHTML</h4>
+                <li>Shows the full markup.</li>
+        </ul>
+        <h3>Attribute manipulation</h3>
+            <p>obj.getAttribute(attr)</p>
+            <p>obj.getAttribute(attr,va)</p>
+        <h3>Maniplulation using ClassList</h3>
+            <p>it is used to style particular attributes properties like color , font , style and many more.</p>
+    </div>
+    <script>
+        // let h4=document.getElementById("h");
+        // console.log(h4);
+        // console.log(h4.innerText);
+        // h4.innerHTML="<u>Khushbu</u>";
+        //id
+        console.log(document.getElementById("list"));
+        let lisobj=document.getElementById("list");
+        console.dir(lisobj);
+        console.log(lisobj);
+        console.log(lisobj.tagName);
+        //class
+        console.log(document.getElementsByClassName("content"));
+        let conobj=document.getElementsByClassName("content");
+        console.dir(conobj);
+        //tag
+        console.log(document.getElementsByTagName("p"));
+        let obj=document.getElementsByTagName("p")[1].innerText="ram";
+        console.log(obj);
+        //Query
+        console.log(document.querySelectorAll("p").innerText="hi");
+        console.log(document.querySelector("#list").innerHTML);
+        console.log(document.querySelector(".wrapper"));
+        //setting object
+        // let obje=document.querySelectorAll("p");
+        // console.log(obje);
+        // for(i=0;i<obje.length;i++){
+        //     console.log(obje[i].innerHTML="khu");
+        // }
+        let heading=document.querySelector("h4");
+        console.log(heading.innerHTML);
+        console.log(heading.innerHTML=`<u>${heading.innerText}</u>`);
+        //manipulating Attribute
+        let images=document.querySelector("img");
+        console.log(images);
+        console.log(images.getAttribute('class'));
+        // console.log(images.setAttribute('class','cover-fit image'));
+        //Manipulating Style''''''''''''''''''''''''''
+        let para=document.querySelectorAll("p");
+        for(let i=0;i<para.length;i++){
+            console.log(para[i].style.color="blue");
+        }
+        let links=document.querySelectorAll('#list li');
+        // for(let j=0;j<links.length;j++){
+        //     console.log(links[j].style.color="purple");
+        // }
+         for(link of links){
+            console.log(link.style.color="purple");
+         }
+        //class list
+        let parag=document.querySelector("p");
+        console.log(parag);
+        parag.classList.add("pink");
+        parag.classList.remove("pink");
+        console.log(parag.classList.contains("underlines"));
+        console.log(parag.classList.toggle("pink"));
+        //Navigation..................
+        //to select next of any attribute.
+        //parent element....
+        //children..........
+        let h4=document.querySelector("h4")
+        console.log(h4.parentElement);
+        console.log(h4.children)
+        console.log(h4.childElementCount);
+        console.log(h4.previousElementSibling.style.color="green");
+        //Adding Element...............................
+        //document.createElement("p")........
+        let newp=document.createElement('p');
+        newp.innerText="hi i'm Adding elemtn"
+        console.log(newp)
+        //append:for nesting intersion...........
+        let body=document.querySelector('body');
+        body.appendChild(newp);
+        //appendchild //prepend //insertadjacent
+        document.createElement('p');
+        let newPi=document.createElement('p');
+        console.dir(newPi);
+        newPi.innerText ="appendChild is now implemented";
+        let big=document.querySelector('body');
+        big.appendChild(newPi);
+        //button
+        let btn=document.createElement('button');
+        btn.innerText="click me";
+        body.appendChild(btn);
+        //removing Element
+        let newbody=document.querySelector('body');
+        let paragr=document.createElement('p')
+        paragr.innerText="hi there , this is khushbu yadav."
+        newbody.appendChild(paragr);
+    </script>
+</body>
+</html>
