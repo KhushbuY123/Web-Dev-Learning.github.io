@@ -1,4 +1,4 @@
-<h3>Web-Dev-Learning</h3>
+<h2>Web-Dev-Learning</h2>
 
 <p>HC Notes</p>
 https://khushbuy123.github.io/Web-Dev-Learning.github.io/HC%20Notes/
