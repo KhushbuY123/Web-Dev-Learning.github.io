@@ -8,3 +8,6 @@ https://khushbuy123.github.io/Web-Dev-Learning.github.io/Spotify%20clone/
 
 # Guessing number
 https://khushbuy123.github.io/Web-Dev-Learning.github.io/guessing%20the%20number/
+
+# MyTextEditor
+https://khushbuy123.github.io/Web-Dev-Learning.github.io/mytexteditor/
