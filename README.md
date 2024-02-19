@@ -12,5 +12,8 @@ https://khushbuy123.github.io/Web-Dev-Learning.github.io/guessing%20the%20number
 # MyTextEditor
 https://khushbuy123.github.io/Web-Dev-Learning.github.io/mytexteditor/
 
-# Api Project First
+# Api Project
+Api project
+
+# Api Project2
 https://khushbuy123.github.io/Web-Dev-Learning.github.io/Api%20project2/
