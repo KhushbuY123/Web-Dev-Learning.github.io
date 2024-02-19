@@ -1,19 +1,19 @@
-<h1>Web-Dev-Learning</h1>
+<h3>Web-Dev-Learning</h3>
 
-# HC Notes
+<p>HC Notes</p>
 https://khushbuy123.github.io/Web-Dev-Learning.github.io/HC%20Notes/
 
-# Spotify Clone
+<p>Spotify Clone</p>
 https://khushbuy123.github.io/Web-Dev-Learning.github.io/Spotify%20clone/
 
-# Guessing number
+<p>Guessing number</p>
 https://khushbuy123.github.io/Web-Dev-Learning.github.io/guessing%20the%20number/
 
-# MyTextEditor
+<p>MyTextEditor</p>
 https://khushbuy123.github.io/Web-Dev-Learning.github.io/mytexteditor/
 
-# Api Project
-Api project
+<p>Api Project</p>
+https://khushbuy123.github.io/Web-Dev-Learning.github.io/Api%20project/
 
-# Api Project2
+<p>Api Project2</p>
 https://khushbuy123.github.io/Web-Dev-Learning.github.io/Api%20project2/
