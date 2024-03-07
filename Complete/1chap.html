@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Javascript</title>
+    
+</head>
+<body>
+    <p style="color: red;">Javascript is most used programming language  for web which is easy to learn</p>
+    <p style="color: blue;">one of many js method is getElementByID() which change html content</p>
+    <h3 id="demo">Hii Javascript</h3>
+    <button type="button" onclick='document.getElementById("demo").innerHTML="Hello JavaScript !"'>Click Me !</button>
+    <script>
+    console.log(13)
+
+// //Comparison operator''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+// let ages=10;
+// console.log(ages>5);
+
+// //Conditional Statement''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+// //if-else......................................................................................................................................................
+// let age=15;
+// if (age>18){
+// console.log("you can vote");
+// }
+// if (age<18){
+//     console.log("you are smart");
+// }
+// else{
+//     console.log("you can't vote");
+// }
+// console.log("afer my if statement");
+// //practice.............................................................................................................................................................
+// let color="red";
+// if (color==="red"){
+//     console.log("stop")
+// }
+// if (color==="yellow"){
+//     cconsole.log("wait")
+// }
+// if (color==='green'){
+//     console.log('go');
+// }
+// if(true){
+//     console.log("yes");
+// }
+// //switch statement.....................................................................................................................................
+// let btn="red";
+// switch(btn){
+//     case "red":
+//         console.log("stop");
+//         break;
+//     case "yellow":
+//         console.log("yello");
+//         break;
+//     default:
+//         console.log("defuat");
+// }
+// //practice...................................................................................................................................................................
+// let value=1;
+// switch(value){
+//     case 1:
+//         console.log("sunday");
+//         break;
+//     case 2:
+//         console.log("monday");
+//         break;
+//     case 3:
+//         console.log('tuesday');
+//         break;
+//     case 4:
+//         console.log("wednesdat")
+//     default:
+//         console.log("sunday")
+// }
+
+// //Alert and prompt''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+// // alert("something is wrong!");
+// // prompt("Enter your name");
+// console.error("went wrong");
+// console.warning("time limit exceeded!");
+
+// //string methods''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+// //trim method.............................................................................................................................................................
+// let password = prompt('Set your password');
+// let newPass=password.trim();
+// console.log(newPass);  
+// //strings are immutable..............................................................................................................................................
+// let str="khushbu"
+// console.log(str.toLowerCase());
+// let str="Mango";
+// console.log(str.repeat(2));
+//practice..................................................................................................................................................................................................
+// let msg="help!";
+// console.log(msg.trim().toUpperCase());
+// let name="ApnaCollege"
+// console.log(name.slice(4,9));
+// console.log(name.indexOf("na"));
+// console.log(name.replace("Apna","Our"));
+// console.log(name.slice(4,name.length).replace('l','t'));
+//arrays'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+// let students=["aman","shradha","rajat"]
+// console.log(students);
+// let nums=[2,4,2,1,6,8];
+// console.log(nums); 
+//array method'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+// nums.push(10)
+// console.log(nums);
+// console.log(nums.pop());
+// console.log(nums.shift());
+// console.log(nums.concat(students));
+// console.log(nums.reverse());
+// console.log(nums.slice(0,2));
+//splice method'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+//remove/replace/add/delecount
+// console.log(nums.sort());
+// let start=['jan','july','march','aug']
+// console.log(start.splice(0,2,'july','june'));
+//array refrence''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+// let num=[[2,4],[5,6]]
+// console.log(num);
+// let tictac=[["x",null,0],[null,"x",null],[0,null,"x"]]
+// console.log(tictac);
+// console.log(tictac[0][1]=0);
+//loop'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+// for (let i=1; i<=5;i++){
+//     console.log(i);  
+// }
+// for (let i=1; i<=15;i++){
+//     if(i%2==0){
+//         console.log(i);
+//     }
+// }
+// let fav="bramha";
+// let guess=prompt("Enter fav movie");
+// while((guess!=fav)&&(guess!="quit")){
+//     console.log('wrong');
+//     guess=prompt("enter");
+// }
+// if (fav==guess){
+//     console.log("found"); 
+// }
+// let fruit=['apple','mango'];
+// undefined
+// for (let i=0; i<fruit.length;i++){
+//     console.log(i,fruit[i]);}
+//nested array loop'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+// let heros=[["ironmn","sharukh","thor"],["ram","prabhas","thor"]]
+// for(let i =0; i<heros.length;i++){
+//     console.log(i,heros[i]);
+//     for(let j=0;i<heros[i].length; j++){
+//         console.log(`j=${j},${heroes[i][j]}`);
+//     }
+// }
+// let student=[["aman",96],["khushbu",100]];
+// for (let i=0; i<student.length;i++){
+//     console.log(student[i]);
+//     for(let j=0;j<student[i].length;j++){
+//         console.log(student[i][j]);
+//     }
+// }
+//''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+//for of loop
+// let fruits=["mango","apple","banana","litchi"];
+// for(fruit of fruits){
+//     console.log(fruit);
+// }
+// for(char of "apnacollege"){
+//     console.log(char);
+// }
+// for(list of student){
+//     console.log(list)}
+//     for(element of list){
+//         console.log(element);
+//     }
+//Object literals''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+//key value pair .................................
+const student={
+    name:"khushbu",age:23,marks:94.4,city:"Delhi"
+};
+console.log(student)
+// Thread/twitter post...........................
+let twitter={
+    name:"user",like:100,reposts:400,tages:"#"
+};
+console.log(twitter);
+console.log(twitter["name"]);
+console.log(twitter.name)
+//get values....................................
+console.log(twitter.name="madhu");
+//array of object...............................
+const info=[
+    {name:"aman",grade:"a"},{name:"khushbu",grade:"b"}
+]
+console.log(info)
+//Random Integer''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+let num=Math.random();
+console.log(num);
+console.log(Math.floor(num));
+console.log(num=num+1);
+console.log(num)+1;
+console.log(Math.random()*10)+1;
+console.log(Math.random()*10)+1;
+console.log(Math.random()*10)+1;
+console.log(Math.random()*10)+1;
+//task...................
+for(let i=0;i<5;i++){
+    console.log(Math.random()*5)+1;
+}
+
+
+
+
+    </script>
+</body>
+</html>

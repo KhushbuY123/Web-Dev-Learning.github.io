@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Higher Order</h3>
+    <script>
+        // function callbackFunction(){
+        // console.log('I am  a callback function');
+        // }
+
+        // // higher order function
+        // function higherOrderFunction(func){
+        //     console.log('I am higher order function')
+        //     func()
+        // }
+
+        // higherOrderFunction(callbackFunction);
+        let area=function area(radius){
+            return 3.14*radius*radius
+        }
+        let param=function para(radius){
+            return 2*3.14*radius
+        }
+        let cal=function calculate(solve,radius){
+            const l=[]
+            for(i=0;i<radius.length;i++){
+                l.push(solve(radius[i]))
+            }
+            return l
+        }
+        let radius=[20,40,10]
+        console.log(cal(area,radius))
+        console.log(cal(param,radius))
+    </script>
+</body>
+</html>

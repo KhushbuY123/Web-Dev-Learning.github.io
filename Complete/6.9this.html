@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This keyword</title>
+</head>
+<body>
+    <p id="demo">1.This Keyword</p>
+    <p id="try">2.Try and Catch</p>
+    <script>
+        //this method'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+        const student={
+            name:"khushbu",
+            age:21,
+            eng:45,
+            math:30,
+            hindi:70,
+            getavg(){
+                let avg=(this.math+this.eng+this.hindi)/3;
+                // console.log(avg);
+                return avg
+            }
+        }
+        document.getElementById("demo").innerHTML=student.getavg()
+        //try and catch''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+        try{
+            console.log(a);
+        }
+        catch{
+            console.log("variable doesn't exist");
+        }
+        //set timeout'''''''''''''''''''''''''''''''''''''''''''''
+        //set Timeout(function,timeout)
+        //excute after the timeout.
+        console.log("hi there");
+        setTimeout(()=>{
+            console.log("apna college");
+        },2000);
+        console.log("Welcome to");
+        //set interval'''''''''''''''''''''''''''''''''''''''''
+        //it desn't stop and execute itself at the same interval.
+        // let id1=setInterval(()=>{
+        //     console.log("Khushbu");
+        // },2000);
+        // console.log(id1);
+        // let id2=setInterval(()=>{
+        //     console.log("Yadav");
+        // },2000);
+        // console.log(id2);
+        // clearInterval(id2);
+        //this keyword with arrow function'''''''''''''''''''''''''''''''''''''''
+        //scopae is same as parent scope here lexical call used. 
+        let students={
+            name:"aman",marks:23,prop:this,
+            getName:function(){
+               console.log(this);
+               return this.name;
+            },
+            getmarks:()=>{
+                console.log(this);//parent's scope
+                return this.marks;
+            }
+        };
+        console.log(students.getName);
+        //practice.............................
+        let id=setInterval(() => {
+            console.log("Hello world");
+        }, 1000);
+        setTimeout(()=>{
+            clearInterval(id);
+        },10000);
+        
+        
+    </script>
+</body>
+</html>

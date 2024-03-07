@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Nested Function</h3>
+    <script>
+        let x=10;
+        function add(y){
+            let x=20
+            function mul(x){
+                console.log(x*y)
+            }
+            mul(x)
+        }
+        console.log(x)
+        add(30)
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">Arrow Function</p>
+    <p  id="mul">Implict Return</p>
+    <script>
+        // Arrow function
+
+        const add=(a,b)=>{
+            return a+b
+        }
+
+        // Implicit return 
+        const mul=(a,b)=>(a*b)
+        document.getElementById("demo").innerHTML=add(5,7)
+        document.getElementById("mul").innerHTML=mul(7,5)
+    </script>
+</body>
+</html>
+
